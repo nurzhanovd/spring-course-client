@@ -1,0 +1,14 @@
+.header {
+    text-align: center;
+}
+
+.button-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    .button {
+        
+        width: 150px;
+        align-self: flex-end;
+    }
+}

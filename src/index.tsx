@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Login from './pages/Auth/Login/Login';
+import Register from './pages/Auth/Register/Register';
+import CarsTable from './pages/Cars/CarsTable';
+import CreateCar from './pages/Cars/CreateEditCar/CreateCar';
+import PagableTable from './pages/Cars/PaginatableTable';
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+    <BrowserRouter>
+        <Switch>
+            <Route path='/login' component={ Login } />
+            <Route path='/register' component={ Register } />
+            <Route exact path='/' component={ PagableTable } />
+            <Route path='/create' component={ CreateCar } />
+            <Route path='/edit/:id' component={ CreateCar } />
+        </Switch>
+    </BrowserRouter>, document.getElementById('root'));
+
