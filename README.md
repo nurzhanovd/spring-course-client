@@ -1,3 +1,10 @@
+TO-DO
+1. Добавить Redux в проект и прикрутить все side-effect'ы туда
+2. Сделать шаблонные методы для http запросов
+3. Покрыть типами проект
+4. Отрефакторить структуру папок
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
